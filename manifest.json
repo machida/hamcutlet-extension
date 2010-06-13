@@ -1,0 +1,15 @@
+{
+    "name": "Ham Cutlet Extension",
+    "version": "0.1",
+    "description": "Ham Cutletを使用したHTMLソース表示",
+    "background_page": "background.html",
+    "browser_action": {
+        "default_icon": "icon.png",
+        "defailt_title": "Ham Cutlet"
+    },
+    "permissions": [
+        "http://hamcutlet.fjord.jp/",
+        "http://*.google.com/",
+        "tabs"
+    ]
+}

@@ -1,0 +1,27 @@
+<html>
+<head>
+<script>
+
+function openTab(v) {
+    t = "http://hamcutlet.fjord.jp/?url=" + v;
+    chrome.tabs.create({url: t});
+}
+
+chrome.browserAction.onClicked.addListener(function(tab) {
+  getUrl();
+});
+
+function getUrl() { 
+    chrome.tabs.getSelected(null, function(tab) { 
+        var url = tab.url;
+        if(url.match(/^http(s)?/)) {
+            openTab(tab.url);
+        }
+    }); 
+} 
+
+</script>
+</head>
+<body>
+</body>
+</html>
